@@ -4,16 +4,59 @@
   <meta charset="UTF-8">
   <title>Dreamcaster Productions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #eee;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-align: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #111 0%, #000 70%);
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 3rem 1rem;
+    }
+
+    a {
+      color: #f6c26b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Dreamcaster Productions</h1>
-  <p>Stories. Music. Worlds Beyond.</p>
+  <section class="hero">
+    <img src="logo.png" alt="Dreamcaster Productions">
 
-  <h2>Portfolios</h2>
-  <ul>
-    <li><a href="raven-stormwing/">Raven Stormwing</a></li>
-  </ul>
+  </section>
+
+  <section class="content">
+    <p>Stories. Music. Worlds Beyond.</p>
+
+    <h2>Portfolios</h2>
+    <p><a href="raven-stormwing/">Raven Stormwing</a></p>
+  </section>
 
 </body>
 </html>
+
