@@ -15,28 +15,34 @@
     }
 
   .hero {
-  height: 70vh;          /* was min-height: 100vh; */
-  max-height: 720px;     /* cap on big monitors */
-  min-height: 420px;     /* keeps it nice on small screens */
+  height: 55vh;
+  max-height: 600px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   background: radial-gradient(circle at center, #111 0%, #000 70%);
 }
 
 .hero img {
-  max-width: min(900px, 92vw);  /* keeps it from going huge */
+  max-width: min(750px, 88vw);
   height: auto;
   display: block;
 }
 
+}
 
-    .content {
-      padding: 3rem 1rem;
-    }
 
-    a {
+  .content {
+  padding: 2.5rem 1rem 4rem;
+  font-size: 1.1rem;
+}
+
+.content h2 {
+  margin-top: 2rem;
+}
+
       color: #f6c26b;
       text-decoration: none;
       font-weight: 600;
