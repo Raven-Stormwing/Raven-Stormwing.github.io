@@ -14,18 +14,23 @@
       text-align: center;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at center, #111 0%, #000 70%);
-    }
+  .hero {
+  height: 70vh;          /* was min-height: 100vh; */
+  max-height: 720px;     /* cap on big monitors */
+  min-height: 420px;     /* keeps it nice on small screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at center, #111 0%, #000 70%);
+}
 
-    .hero img {
-      max-width: 100%;
-      height: auto;
-    }
+.hero img {
+  max-width: min(900px, 92vw);  /* keeps it from going huge */
+  height: auto;
+  display: block;
+}
+
 
     .content {
       padding: 3rem 1rem;
