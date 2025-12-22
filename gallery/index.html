@@ -1,1 +1,131 @@
-gallery/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreamcaster Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #eee;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    header {
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+    a { color: #f6c26b; text-decoration: none; font-weight: 600; }
+    a:hover { color: #ffd27d; text-decoration: underline; }
+
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem 3rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .tile {
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .tile img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      transition: transform .15s ease;
+    }
+    .tile:hover img { transform: scale(1.03); }
+
+    /* lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 999;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .hint {
+      opacity: 0.7;
+      font-size: 0.95rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap">
+    <h1>Dreamcaster Gallery</h1>
+    <p class="hint">Click an image to view larger. Press Esc to close.</p>
+    <p><a href="../">← Back to Dreamcaster Productions</a></p>
+  </header>
+
+  <main class="wrap">
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightboxImg" alt="Gallery image" />
+  </div>
+
+  <script>
+    async function loadGallery() {
+      const res = await fetch("./gallery.json");
+      const files = await res.json();
+
+      const grid = document.getElementById("grid");
+      files.forEach(file => {
+        const tile = document.createElement("a");
+        tile.href = "./images/" + file;
+        tile.className = "tile";
+        tile.innerHTML = `<img src="./images/${file}" loading="lazy" alt="">`;
+        tile.addEventListener("click", (e) => {
+          e.preventDefault();
+          openLightbox(tile.href);
+        });
+        grid.appendChild(tile);
+      });
+    }
+
+    function openLightbox(src) {
+      const lb = document.getElementById("lightbox");
+      const img = document.getElementById("lightboxImg");
+      img.src = src;
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById("lightbox");
+      const img = document.getElementById("lightboxImg");
+      img.src = "";
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+    }
+
+    document.getElementById("lightbox").addEventListener("click", closeLightbox);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+
+    loadGallery();
+  </script>
+
+</body>
+</html>
+
