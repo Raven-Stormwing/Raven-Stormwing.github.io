@@ -6,126 +6,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    margin: 0;
-    background: #000;
-    color: #eee;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    text-align: center;
-  }
+    body {
+      margin: 0;
+      background: #000;
+      color: #eee;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-align: center;
+    }
 
- .hero-video {
-  position: relative;
-  height: 70vh;
-  min-height: 420px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .hero-video {
+      position: relative;
+      height: 70vh;
+      min-height: 420px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.hero-video video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .hero-video video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.hero-video::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
+    .hero-video::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
 
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-}
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+    }
 
-.hero-overlay img {
-  max-width: min(520px, 80vw);
-}
+    .hero-overlay img {
+      max-width: min(520px, 80vw);
+      height: auto;
+    }
 
-.hero-overlay h1 {
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  margin: 1rem 0 0.5rem;
-  color: #f6c26b;
-}
+    .hero-overlay h1 {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      margin: 1rem 0 0.5rem;
+      color: #f6c26b;
+    }
 
-.hero-buttons {
-  margin-top: 1.5rem;
-}
+    .content {
+      padding: 2.5rem 1rem 4rem;
+      font-size: 1.1rem;
+    }
 
-.hero-buttons a {
-  display: inline-block;
-  margin: 0.4rem;
-  padding: 0.8rem 1.2rem;
-  border: 1px solid #f6c26b;
-  border-radius: 999px;
-}
+    .content h2 {
+      margin-top: 2rem;
+      color: #f6c26b;
+    }
 
-.feature {
-  background: #080808;
-}
+    .hero-buttons a {
+      display: inline-block;
+      margin: 0.4rem;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #f6c26b;
+      border-radius: 999px;
+    }
 
-  .hero img {
-    max-width: min(750px, 88vw);
-    height: auto;
-    display: block;
-  }
+    a,
+    a:link,
+    a:visited {
+      color: #f6c26b;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  .content {
-    padding: 2.5rem 1rem 4rem;
-    font-size: 1.1rem;
-  }
-
-  .content h2 {
-    margin-top: 2rem;
-  }
-
-  a,
-  a:link,
-  a:visited {
-    color: #f6c26b;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  a:hover,
-  a:focus {
-    color: #ffd27d;
-    text-decoration: underline;
-  }
-
-  a:active {
-    color: #ffe7a3;
-  }
-</style>
-
+    a:hover,
+    a:focus {
+      color: #ffd27d;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
 
- <section class="hero">
-  <div class="hero-inner">
-    <img src="logo.png" alt="Dreamcaster">
-    <div class="subtitle">Productions</div>
-  </div>
-</section>
+  <section class="hero-video">
+    <video autoplay muted loop playsinline poster="logo.png">
+      <source src="dreamcaster-header.mp4" type="video/mp4">
+    </video>
 
-   <section class="content">
-    <p>Stories. Music. Worlds Beyond.</p>
-    
+    <div class="hero-overlay">
+      <img src="logo.png" alt="Dreamcaster Productions">
+      <h1>Raven Stormwing</h1>
+      <p>Stories. Music. Worlds Beyond.</p>
+
+      <div class="hero-buttons">
+        <a href="raven-stormwing/">Enter the World</a>
+        <a href="#latest">Latest Letter</a>
+        <a href="#shop">Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Raven Stormwing</h2>
+    <p>Fantasy after the moon broke. Magic returned. The world changed.</p>
+    <p><a href="raven-stormwing/">Explore The Change of an Age</a></p>
+
+    <h2 id="latest">Latest from Substack</h2>
+    <p>Read lore drops, behind-the-scenes notes, and the newest Raven Stormwing letter.</p>
+    <p><a href="YOUR_SUBSTACK_LINK_HERE">Read on Substack</a></p>
+
+    <h2 id="shop">Shop Raven’s Call</h2>
+    <p>Signed copies, ebooks, and Dreamcaster creations.</p>
+    <p><a href="YOUR_ETSY_SHOP_LINK_HERE">Visit the Etsy Shop</a></p>
+
     <h2>Gallery</h2>
-<p><a href="gallery/">Artwork & Concepts</a></p>
-
-    <h2>Portfolios</h2>
-    <p><a href="raven-stormwing/">Raven Stormwing</a></p>
+    <p><a href="gallery/">Artwork & Concepts</a></p>
   </section>
 
 </body>
+</html>
 </html>
 
