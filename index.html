@@ -115,6 +115,12 @@
 
 .shop-card {
   max-width: 360px;
+.shop-card .button {
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+}
+  
 }
   </style>
 </head>
@@ -139,11 +145,8 @@
    <h2 id="latest">Latest from Substack</h2>
   <p>Read lore drops, behind-the-scenes notes, and the newest Raven Stormwing letter.</p>
   <p><a class="button" href="https://substack.com/@ravenstormwing">Read on Substack</a></p>
-
-  <h2 id="shop">Shop Raven’s Call</h2>
-  <p>Signed copies, ebooks, and Dreamcaster creations.</p>
-  <p><a class="button" href="https://dreamcastbystormwing.etsy.com">Visit the Etsy Shop</a></p>
-
+  
+<h2 id="shop">Shop Raven’s Call</h2>
 <p>Signed copies, ebooks, and Dreamcaster creations.</p>
 
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
@@ -151,22 +154,21 @@
 <div class="shop-items">
 
   <div class="shop-card">
-    <h3>Ebook - $2.99</h3>
-    <stripe-buy-button
-      buy-button-id="buy_btn_1Tl3qGJ8W6E1osnjuUWvBZAV"
-      publishable-key="pk_live_51TNo8xJ8W6E1osnjCZ0aMTBYxBMelJTFKOmboqalxYCVyGbGhAlXwu8dBdRkUAb28vZDYFddaUoW0G3UVmiYYaD500vP48jI8Q">
-    </stripe-buy-button>
+    <h3>Ebook ($2.99)</h3>
+    <p><a class="button" href="https://buy.stripe.com/00w28sf3o8jVePYfGOffy01">Buy Ebook</a></p>
   </div>
 
   <div class="shop-card">
-    <h3>Signed Paperback - $12.99</h3>
-    <stripe-buy-button
-      buy-button-id="buy_btn_1Tl49LJ8W6E1osnjwvegkHKQ"
-      publishable-key="pk_live_51TNo8xJ8W6E1osnjCZ0aMTBYxBMelJTFKOmboqalxYCVyGbGhAlXwu8dBdRkUAb28vZDYFddaUoW0G3UVmiYYaD500vP48jI8Q">
-    </stripe-buy-button>
+    <h3>Signed Copy ($12.99)</h3>
+    <p><a class="button" href="https://buy.stripe.com/14A28s08u2ZB7nwamuffy00">Buy Signed Copy</a></p>
   </div>
 
 </div>
+  
+</div>
+
+<p>If you prefer Etsy:</p>
+<p><a class="button" href="https://dreamcastbystormwing.etsy.com">Visit the Etsy Shop</a></p>
 
   <h2>Gallery</h2>
   <p><a class="button" href="gallery/">Artwork & Concepts</a></p>
