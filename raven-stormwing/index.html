@@ -52,32 +52,9 @@
   background: black;
   inset: 0;
   z-index: 0;
-}
 
-.hero-overlay {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 2rem;
-  border-radius: 12px;
 }
-
-.video-hero {
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.video-hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
+    
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -129,10 +106,11 @@ iframe {
 
 <body>
 
-  <header class="video-hero">
-  <video controls muted playsinline>
+ <header class="video-hero">
+  <video autoplay muted loop playsinline preload="auto">
     <source src="Raven Flight.mp4" type="video/mp4">
-</video>
+  </video>
+</header>
       <source src="Raven Flight.mp4" type="video/mp4">
     </video>
   </header>
