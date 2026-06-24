@@ -5,6 +5,10 @@
   <title>Raven Stormwing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+/* =========================================
+   SITE BACKGROUND & TYPOGRAPHY
+   ========================================= */
+  
   <style>
     body {
       margin: 0;
@@ -30,6 +34,11 @@
       text-decoration: underline;
     }
 
+/* =========================================
+   VIDEO HEADER
+   ========================================= */
+
+    
     .video-hero {
       position: relative;
       height: 320px;
@@ -60,6 +69,10 @@
       margin: 0 auto 4rem;
     }
 
+    /* =========================================
+   AUTHOR INTRODUCTION
+   ========================================= */
+
     .intro {
       margin-top: 2rem;
     }
@@ -76,6 +89,10 @@
       color: #ddd;
     }
 
+/* =========================================
+   CONTENT CARDS
+   ========================================= */
+    
     .link-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -117,6 +134,10 @@
       margin-top: 1rem;
     }
 
+/* =========================================
+   BUTTONS
+   ========================================= */
+    
     .button {
       display: inline-block;
       margin: 0.5rem;
@@ -137,6 +158,10 @@
       padding: 0 1rem 2rem;
     }
 
+/* =========================================
+   MOBILE ADJUSTMENTS
+   ========================================= */
+    
     @media (max-width: 800px) {
       .link-grid {
         grid-template-columns: 1fr;
@@ -154,7 +179,9 @@
 </head>
 
 <body>
-
+  
+<!-- Header Video-->
+  
   <header class="video-hero">
     <video autoplay muted loop playsinline preload="auto">
       <source src="Raven Flight.mp4" type="video/mp4">
@@ -163,11 +190,15 @@
 
   <main>
 
+    <!--Author Introduction-->
+   
     <section class="intro block">
       <h1>Raven Stormwing</h1>
       <p>Author · Composer · Worldbuilder</p>
     </section>
 
+   <!-- Navigation Cards -->
+    
     <section class="link-grid">
 
       <div class="card">
@@ -196,6 +227,8 @@
 
     </section>
 
+<!-- Featured Song -->
+    
     <section class="block">
       <h2>Featured Song</h2>
 
@@ -211,6 +244,8 @@
       </iframe>
     </section>
 
+<!-- Featured Newsletter Video -->
+    
     <section class="block">
       <h2>Featured Newsletter Video</h2>
 
@@ -244,6 +279,8 @@
 
   </main>
 
+<!-- Book Trailer -->
+  
   <footer class="trailer-footer">
     <h2>Book Trailer</h2>
 
