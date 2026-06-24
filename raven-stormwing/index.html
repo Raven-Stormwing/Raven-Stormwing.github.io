@@ -69,52 +69,124 @@
   padding: 2rem;
   border-radius: 12px;
 }
+
+.video-hero {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-top: 2rem;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(246, 194, 107, 0.35);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.trailer-footer {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  padding-bottom: 2rem;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-hero {
+    height: 220px;
+  }
+}
     
   </style>
 </head>
 
 <body>
 
-  <div class="block">
-    <h1>Raven Stormwing</h1>
-    <p>Author · Composer · Worldbuilder</p>
-  </div>
+  <header class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="Raven Flight.mp4" type="video/mp4">
+    </video>
+  </header>
 
-  <div class="block">
-    <h2>Published Works</h2>
-    <p><a href="https://a.co/d/3TR0Fdx" target="_blank">Amazon</a></p>
-    <p><a href="https://www.royalroad.com/profile/52316/fictions" target="_blank">Royal Road</a></p>
-  </div>
+  <main>
 
-  <div class="block">
-    <h2>Blog</h2>
-    <p><a href="https://substack.com/@ravenstormwing" target="_blank">Substack</a></p>
-  </div>
+    <section class="intro block">
+      <h1>Raven Stormwing</h1>
+      <p>Author · Composer · Worldbuilder</p>
+    </section>
 
- <div class="links">
-   <h2>Media</h2>
- <p>
-  <a href="https://open.spotify.com/artist/5E1lDE3W7Qp8ij7Owg8p3R?si=f437A5wsRh6_o_NHTgzfrw"_blank">
-    🎵 Spotify
-  </a> |
-  <a href="https://www.youtube.com/@RavenStormwing/videos" target="_blank">
-    ▶️ YouTube
-  </a>
-</p>
+    <section class="link-grid">
 
-</div>
+      <div class="card">
+        <h2>Published Works</h2>
+        <p><a href="https://www.royalroad.com/profile/52316/fictions" target="_blank">Royal Road</a></p>
+        <p><a href="https://a.co/d/3TR0Fdx" target="_blank">Amazon</a></p>
+      </div>
 
+      <div class="card">
+        <h2>Blog / Newsletter</h2>
+        <p><a href="https://substack.com/@ravenstormwing" target="_blank">Substack</a></p>
+      </div>
 
-  <div class="block">
-  <h2>Social</h2>
-  <p>
-    <a href="https://www.facebook.com/raven.stormwing" target="_blank">
-      Facebook
-    </a>
-  </p>
-</div>
+      <div class="card">
+        <h2>Music & Media</h2>
+        <p><a href="https://open.spotify.com/artist/5E1lDE3W7Qp8ij7Owg8p3R?si=f437A5wsRh6_o_NHTgzfrw" target="_blank">🎵 Spotify</a></p>
+        <p><a href="https://www.youtube.com/@RavenStormwing/videos" target="_blank">▶️ YouTube</a></p>
+        <p><a href="https://www.facebook.com/raven.stormwing" target="_blank">Facebook</a></p>
+      </div>
 
-  <p><a href="../">← Back to Dreamcaster Productions</a></p>
+    </section>
+
+    <section class="block">
+      <h2>Featured Song</h2>
+      <p>Add your Spotify embed here.</p>
+    </section>
+
+    <section class="block">
+      <h2>Newsletter Videos</h2>
+      <p>Add your YouTube or TikTok embeds here.</p>
+    </section>
+
+  </main>
+
+  <footer class="trailer-footer">
+    <h2>Book Trailer</h2>
+    <p>Add your book trailer embed here.</p>
+
+    <p><a href="../">← Back to Dreamcaster Productions</a></p>
+  </footer>
 
 </body>
 </html>
