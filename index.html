@@ -15,15 +15,15 @@
     }
 
     .hero-video {
-  position: relative;
-  height: 35vh;
-  min-height: 220px;
-  max-height: 360px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      position: relative;
+      height: 35vh;
+      min-height: 220px;
+      max-height: 360px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     .hero-video video {
       position: absolute;
@@ -33,32 +33,8 @@
       object-fit: contain;
     }
 
-    .hero-video::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-overlay {
-      position: relative;
-      z-index: 2;
-      padding: 2rem;
-    }
-
-    .hero-overlay img {
-      max-width: min(520px, 80vw);
-      height: auto;
-    }
-
-    .hero-overlay h1 {
-      font-size: clamp(2.4rem, 7vw, 5rem);
-      margin: 1rem 0 0.5rem;
-      color: #f6c26b;
-    }
-
     .content {
-      padding: 2.5rem 1rem 4rem;
+      padding: 2.5rem 1rem 2rem;
       font-size: 1.1rem;
     }
 
@@ -67,19 +43,18 @@
       color: #f6c26b;
     }
 
-    .hero-buttons a {
-      display: inline-block;
-      margin: 0.4rem;
-      padding: 0.8rem 1.2rem;
-      border: 1px solid #f6c26b;
-      border-radius: 999px;
+    .raven-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #f6c26b;
+      text-shadow: 0 0 12px rgba(246,194,107,.4);
+    }
 
-      .cover-note {
-  font-size: 0.9rem;
-  opacity: 0.7;
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
-}
+    .block {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
     }
 
     a,
@@ -95,145 +70,157 @@
       color: #ffd27d;
       text-decoration: underline;
     }
+
     .button {
-  display: inline-block;
-  margin-top: 0.75rem;
-  padding: 0.85rem 1.4rem;
-  border: 1px solid #f6c26b;
-  border-radius: 999px;
-  background: rgba(246, 194, 107, 0.08);
-  color: #f6c26b;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s ease;
-}
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.85rem 1.4rem;
+      border: 1px solid #f6c26b;
+      border-radius: 999px;
+      background: rgba(246, 194, 107, 0.08);
+      color: #f6c26b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
 
-.button:hover {
-  background: rgba(246, 194, 107, 0.2);
-  text-decoration: none;
-}
-  .shop-items {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
+    .button:hover {
+      background: rgba(246, 194, 107, 0.2);
+      text-decoration: none;
+    }
 
-.shop-card {
-  max-width: 360px;
-.shop-card .button {
-  display: inline-block;
-  width: 220px;
-  text-align: center;
-}
+    .book-cover {
+      width: 220px;
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 1rem auto 1rem;
+      border-radius: 8px;
+    }
 
-.book-cover {
-  width: 10%;
-  max-width: 500px;
-  height: auto;
-  display: block;
-  margin: 1rem auto 2rem;
-  border-radius: 8px;
-}
+    .cover-note {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: -0.25rem;
+      margin-bottom: 1.5rem;
+    }
 
-.site-footer-banner {
-    width: 100%;
-    margin-top: 3rem;
-}
+    .shop-items {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
 
-.site-footer-banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-  
-  .raven-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #f6c26b;
-  text-shadow: 0 0 12px rgba(246,194,107,.4);
-}
-  
+    .shop-card {
+      max-width: 360px;
+    }
+
+    .shop-card .button {
+      display: inline-block;
+      width: 220px;
+      text-align: center;
+    }
+
+    .site-footer-banner {
+      width: 100%;
+      margin-top: 3rem;
+    }
+
+    .site-footer-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .raven-title {
+        font-size: 2.3rem;
+      }
+
+      .shop-card .button {
+        width: auto;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="dreamcaster-header.mp4" type="video/mp4">
-  </video>
-</section>
+    <video autoplay muted loop playsinline>
+      <source src="dreamcaster-header.mp4" type="video/mp4">
+    </video>
+  </section>
 
- <section class="content">
- <h2 class="raven-title">Raven Stormwing</h2>
-  <p>Fantasy after the moon broke. Magic returned. The world changed.</p>
-   </section>
+  <section class="content">
+    <h2 class="raven-title">Raven Stormwing</h2>
+    <p>Fantasy after the moon broke. Magic returned. The world changed.</p>
+  </section>
 
-<section class="block">
-  <h2>Author Hub</h2>
+  <section class="block">
+    <h2>Author Hub</h2>
 
-  <p>
-    Visit Raven Stormwing for the latest newsletter,
-    videos, music, and story updates.
-  </p>
+    <p>
+      Visit Raven Stormwing for the latest newsletter,
+      videos, music, and story updates.
+    </p>
 
-  <a class="button" href="raven-stormwing/">
-    Visit Raven Stormwing →
-  </a>
-</section>
-   
-<h2 id="shop">Shop Raven’s Call</h2>
-<p>Signed copies, ebooks, and Dreamcaster creations.</p>
-
-<a href="rc-cover2.jpg" target="_blank">
-  <img src="rc-cover.jpg"
-       alt="Raven's Call Cover"
-       class="book-cover">
-</a>
-
-<p class="cover-note">
-  Click cover to view full size
-</p>
-
-<div class="shop-items">
-
-  <div class="shop-card">
-    <h3>Ebook ($2.99)</h3>
-    <p><a class="button" href="https://buy.stripe.com/00w28sf3o8jVePYfGOffy01">Buy Ebook</a></p>
-  </div>
-
-  <div class="shop-card">
-    <h3>Autographed Copy ($12.99)</h3>
-    <p><a class="button" href="https://buy.stripe.com/14A28s08u2ZB7nwamuffy00">Buy Autographed Copy</a></p>
-  </div>
-
-</div>
-
-<p>If you prefer another shop:</p>
-
-<div class="shop-items">
-
-  <div class="shop-card">
-    <p><a class="button" href="https://a.co/d/0ir6c4JF">Buy on Amazon</a></p>
-  </div>
-
-  <div class="shop-card">
-    <p><a class="button" href="https://dreamcastbystormwing.etsy.com">Buy on Etsy</a></p>
-  </div>
-
-</div>
-
-  <h2>Gallery</h2>
-  <p><a class="button" href="gallery/">Artwork & Concepts</a></p>
-</section>
-
-<footer class="site-footer-banner">
-    <a href="https://www.royalroad.com/profile/52316/fictions" target="_blank">
-        <img src="RRbanner.jpg" alt="The Change of an Age on Royal Road">
+    <a class="button" href="raven-stormwing/">
+      Visit Raven Stormwing →
     </a>
-</footer>
+  </section>
+
+  <section class="block">
+    <h2 id="shop">Shop Raven’s Call</h2>
+    <p>Signed copies, ebooks, and Dreamcaster creations.</p>
+
+    <a href="rc-cover2.jpg" target="_blank">
+      <img src="rc-cover.jpg"
+           alt="Raven's Call Cover"
+           class="book-cover">
+    </a>
+
+    <p class="cover-note">
+      Click cover to view full size
+    </p>
+
+    <div class="shop-items">
+      <div class="shop-card">
+        <h3>Ebook ($2.99)</h3>
+        <p><a class="button" href="https://buy.stripe.com/00w28sf3o8jVePYfGOffy01">Buy Ebook</a></p>
+      </div>
+
+      <div class="shop-card">
+        <h3>Autographed Copy ($12.99)</h3>
+        <p><a class="button" href="https://buy.stripe.com/14A28s08u2ZB7nwamuffy00">Buy Autographed Copy</a></p>
+      </div>
+    </div>
+
+    <p>If you prefer another shop:</p>
+
+    <div class="shop-items">
+      <div class="shop-card">
+        <p><a class="button" href="https://a.co/d/0ir6c4JF">Buy on Amazon</a></p>
+      </div>
+
+      <div class="shop-card">
+        <p><a class="button" href="https://dreamcastbystormwing.etsy.com">Buy on Etsy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Gallery</h2>
+    <p><a class="button" href="gallery/">Artwork & Concepts</a></p>
+  </section>
+
+  <footer class="site-footer-banner">
+    <a href="https://www.royalroad.com/profile/52316/fictions" target="_blank">
+      <img src="RRbanner.jpg" alt="The Change of an Age on Royal Road">
+    </a>
+  </footer>
+
 </body>
 </html>
