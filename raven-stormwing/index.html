@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Raven Stormwing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
   <style>
-   body {
-  margin: 0;
-  background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
-    url("RSBG.jpg") center / cover no-repeat fixed;
-  color: #eee;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.75)),
+        url("RSBG.jpg") center / cover no-repeat fixed;
+      color: #eee;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-align: center;
+    }
 
     h1 {
       text-shadow: 0 0 8px rgba(246, 194, 107, 0.25);
@@ -30,135 +30,133 @@
       text-decoration: underline;
     }
 
+    .video-hero {
+      position: relative;
+      height: 320px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-hero video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
+      inset: 0;
+      z-index: 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
     .block {
       max-width: 700px;
       margin: 0 auto 4rem;
     }
 
-.video-hero {
-  position: relative;
-  height: 320px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .intro {
+      margin-top: 2rem;
+    }
 
-.video-hero video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: transparent;
-  inset: 0;
-  z-index: 0;
+    .intro h1 {
+      font-size: 4rem;
+      margin-bottom: 0.25rem;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(246, 194, 107, 0.4);
+    }
 
-}
-    
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
+    .intro p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
 
-.intro {
-  margin-top: 2rem;
-}
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto 4rem;
+    }
 
-.intro h1 {
-  font-size: 4rem;
-  margin-bottom: 0.25rem;
-  color: #fff;
-  text-shadow: 0 0 12px rgba(246, 194, 107, 0.4);
-}
+    .card {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(246, 194, 107, 0.35);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
 
-.intro p {
-  font-size: 1.2rem;
-  color: #ddd;
-}
+    .card-divider {
+      border: 0;
+      border-top: 1px solid rgba(246,194,107,.25);
+      margin: 12px 20px;
+    }
 
-.link-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto 4rem;
-}
+    iframe {
+      max-width: 100%;
+      border-radius: 12px;
+    }
 
-.card {
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(246, 194, 107, 0.35);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
+    .newsletter-video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+    }
 
-.trailer-footer {
-  max-width: 900px;
-  margin: 4rem auto 0;
-  padding-bottom: 2rem;
-}
+    .featured-article-link {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
 
-iframe {
-  max-width: 100%;
-  border-radius: 12px;
-}
+    .social-video-links {
+      margin-top: 1rem;
+    }
 
-.video-links {
-  margin-top: 1rem;
-}
+    .button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid rgba(246,194,107,.5);
+      border-radius: 8px;
+      background: rgba(0,0,0,.35);
+    }
 
-.button {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(246,194,107,.5);
-  border-radius: 8px;
-  background: rgba(0,0,0,.35);
-}
+    .button:hover {
+      background: rgba(246,194,107,.15);
+      text-decoration: none;
+    }
 
-.button:hover {
-  background: rgba(246,194,107,.15);
-  text-decoration: none;
-}
+    .trailer-footer {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 1rem 2rem;
+    }
 
-@media (max-width: 800px) {
-  .link-grid {
-    grid-template-columns: 1fr;
-  }
+    @media (max-width: 800px) {
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .video-hero {
-    height: 220px;
-  }
-}
+      .video-hero {
+        height: 220px;
+      }
 
-<div class="video-links">
-  <a class="button" href="https://www.youtube.com/@RavenStormwing/videos" target="_blank">
-    ▶️ More Videos on YouTube
-  </a>
-
-  <a class="button" href="YOUR_TIKTOK_URL" target="_blank">
-    🎵 Follow on TikTok
-  </a>
-</div>
-  
-}
-
-  .card-divider {
-  border: 0;
-  border-top: 1px solid rgba(246,194,107,.25);
-  margin: 12px 20px;
-}
-    
+      .intro h1 {
+        font-size: 2.5rem;
+      }
+    }
   </style>
 </head>
 
 <body>
 
- <header class="video-hero">
-  <video autoplay muted loop playsinline preload="auto">
-    <source src="Raven Flight.mp4" type="video/mp4">
-  </video>
-</header>
+  <header class="video-hero">
+    <video autoplay muted loop playsinline preload="auto">
       <source src="Raven Flight.mp4" type="video/mp4">
     </video>
   </header>
@@ -176,11 +174,11 @@ iframe {
         <h2>Stories</h2>
         <p><a href="https://www.royalroad.com/fiction/118855/the-sundering-anthologies-ravens-call?utm_source=profile&utm_medium=fictions" target="_blank">Raven's Call</a></p>
         <p><a href="https://www.royalroad.com/fiction/125674/the-change-of-an-age?utm_source=profile&utm_medium=fictions" target="_blank">Change of an Age</a></p>
-        
+
         <hr class="card-divider">
-        
+
         <p><a href="https://www.royalroad.com/profile/52316/fictions" target="_blank">Royal Road</a></p>
-        <p><a href="https://www.goodreads.com/book/show/241923579-raven-s-call">Goodreads</a></p>
+        <p><a href="https://www.goodreads.com/book/show/241923579-raven-s-call" target="_blank">Goodreads</a></p>
       </div>
 
       <div class="card">
@@ -200,60 +198,67 @@ iframe {
 
     <section class="block">
       <h2>Featured Song</h2>
-      <p><iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/34SJk2uG5OjNc0qkwcXSp7?utm_source=generator&si=d446212f710a4cf0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></p>
+
+      <iframe
+        data-testid="embed-iframe"
+        src="https://open.spotify.com/embed/track/34SJk2uG5OjNc0qkwcXSp7?utm_source=generator&si=d446212f710a4cf0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
     </section>
 
- <section class="block">
-  <h2>Featured Newsletter Video</h2>
+    <section class="block">
+      <h2>Featured Newsletter Video</h2>
 
-  <video class="newsletter-video" controls>
-    <source src="Gaia Remembers.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+      <video class="newsletter-video" controls>
+        <source src="Gaia Remembers.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
-  <div class="video-links">
-    <a class="button"
-       href="https://substack.com/home/post/p-202927186"
-       target="_blank">
-       Read the Featured Article
-    </a>
+      <div class="featured-article-link">
+        <a class="button"
+           href="https://substack.com/home/post/p-202927186"
+           target="_blank">
+          Read the Featured Article
+        </a>
+      </div>
 
-    <a class="button"
-       href="https://www.youtube.com/@RavenStormwing/videos"
-       target="_blank">
-       More Videos on YouTube
-    </a>
-  </div>
+      <div class="social-video-links">
+        <a class="button"
+           href="https://www.youtube.com/@RavenStormwing/videos"
+           target="_blank">
+          ▶️ More Videos on YouTube
+        </a>
 
-</section>
-
-   <div class="video-links">
-  <a class="button" href="https://www.youtube.com/@RavenStormwing/videos" target="_blank">
-    ▶️ More Videos on YouTube
-  </a>
-
-  <a class="button" href="https://www.tiktok.com/@ravenstormwing0" target="_blank">
-    🎵 Follow on TikTok
-  </a>
-</div> 
+        <a class="button"
+           href="https://www.tiktok.com/@ravenstormwing0"
+           target="_blank">
+          🎵 Follow on TikTok
+        </a>
+      </div>
+    </section>
 
   </main>
 
-<footer class="trailer-footer">
-  <h2>Book Trailer</h2>
+  <footer class="trailer-footer">
+    <h2>Book Trailer</h2>
 
-  <iframe
-    width="100%"
-    height="500"
-    src="https://www.youtube.com/embed/0Z0oXxaSuGM"
-    title="Raven's Call Book Trailer"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
+    <iframe
+      width="100%"
+      height="500"
+      src="https://www.youtube.com/embed/0Z0oXxaSuGM"
+      title="Raven's Call Book Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
 
-  <p><a href="../">← Back to Dreamcaster Productions</a></p>
-</footer>
+    <p><a href="../">← Back to Dreamcaster Productions</a></p>
+  </footer>
 
 </body>
 </html>
